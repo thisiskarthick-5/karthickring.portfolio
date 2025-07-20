@@ -14,9 +14,9 @@
 
     html, body {
       font-family: 'Fira Code', monospace;
-      background: radial-gradient(circle, #000 60%, #111);
+      background: radial-gradient(circle, #0f2027 60%, #203a43);
       overflow-x: hidden;
-      color: white;
+      color: #e0f7fa;
     }
 
     header {
@@ -27,13 +27,13 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: rgba(0,0,0,0.6);
+      background-color: rgba(15, 32, 39, 0.8);
       backdrop-filter: blur(8px);
     }
 
     .logo {
       font-size: 1.6em;
-      color: #00ff9f;
+      color: #00bcd4;
       font-weight: bold;
     }
 
@@ -41,26 +41,24 @@
       display: flex;
       gap: 1em;
       align-items: center;
-      transition: all 0.3s ease-in-out;
       flex-wrap: wrap;
     }
 
     nav a {
-      color: #fff;
+      color: #e0f7fa;
       text-decoration: none;
       font-weight: bold;
       padding: 0.4em 0.6em;
       transition: color 0.3s ease;
-      white-space: nowrap;
     }
 
     nav a:hover {
-      color: #00ff9f;
+      color: #00bcd4;
     }
 
     nav .btn {
       padding: 0.4em 0.8em;
-      background: #00ff9f;
+      background: #00bcd4;
       border: none;
       border-radius: 20px;
       color: #000;
@@ -70,7 +68,7 @@
     }
 
     nav .btn:hover {
-      background: #00cc88;
+      background: #0097a7;
       transform: scale(1.05);
     }
 
@@ -95,7 +93,7 @@
       align-items: center;
       transform-style: preserve-3d;
       animation: rotate 10s linear infinite;
-      filter: drop-shadow(0 0 15px #0f0);
+      filter: drop-shadow(0 0 15px #00bcd4);
       flex-wrap: wrap;
       padding: 2em 0;
       position: relative;
@@ -106,13 +104,13 @@
       position: absolute;
       width: 300px;
       height: 300px;
-      border: 2px solid hsl(calc(var(--i) * 18), 100%, 60%);
+      border: 2px solid hsl(calc(var(--i) * 18), 100%, 70%);
       border-radius: 50%;
       animation: wave 2.5s ease-in-out infinite;
       animation-delay: calc(var(--i) * 0.12s);
       transform: rotateX(70deg) translateZ(calc(var(--i) * 4px));
       opacity: 0.8;
-      box-shadow: 0 0 12px hsl(calc(var(--i) * 18), 100%, 60%);
+      box-shadow: 0 0 12px hsl(calc(var(--i) * 18), 100%, 70%);
     }
 
     @keyframes wave {
@@ -141,7 +139,7 @@
     .content h2 {
       font-size: 1.2em;
       margin-bottom: 0.5em;
-      color: #ccc;
+      color: #b2ebf2;
     }
 
     .content h1 {
@@ -151,7 +149,7 @@
     }
 
     .highlight {
-      color: #00ff9f;
+      color: #00bcd4;
     }
 
     .content p {
@@ -163,7 +161,7 @@
     .btn {
       padding: 0.7em 1.5em;
       margin-top: 2em;
-      background: #00ff9f;
+      background: #00bcd4;
       border: none;
       border-radius: 30px;
       color: #000;
@@ -174,14 +172,14 @@
     }
 
     .btn:hover {
-      background: #00cc88;
+      background: #0097a7;
       transform: scale(1.05);
     }
 
     @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(0, 255, 159, 0.6); }
-      70% { box-shadow: 0 0 0 10px rgba(0, 255, 159, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(0, 255, 159, 0); }
+      0% { box-shadow: 0 0 0 0 rgba(0, 188, 212, 0.6); }
+      70% { box-shadow: 0 0 0 10px rgba(0, 188, 212, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 188, 212, 0); }
     }
 
     @media (max-width: 768px) {
@@ -189,7 +187,7 @@
         position: absolute;
         top: 70px;
         left: 0;
-        background: rgba(0, 0, 0, 0.95);
+        background: rgba(15, 32, 39, 0.95);
         width: 100%;
         flex-direction: column;
         align-items: center;
@@ -287,6 +285,5 @@
       nav.classList.toggle('active');
     }
   </script>
-
 </body>
 </html>
