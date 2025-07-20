@@ -67,17 +67,19 @@
     }
 
     header {
-      position: relative;
-      z-index: 2;
-      padding: 1em 5%;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 0.5em 3%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       background-color: rgba(0,0,0,0.6);
+      backdrop-filter: blur(8px);
     }
 
     .logo {
-      font-size: 2em;
+      font-size: 1.6em;
       color: #00ff9f;
       font-weight: bold;
     }
@@ -86,55 +88,53 @@
       display: flex;
       gap: 1em;
       align-items: center;
+      transition: all 0.3s ease-in-out;
+      flex-wrap: wrap;
     }
 
     nav a {
       color: #fff;
       text-decoration: none;
       font-weight: bold;
-      padding: 0.5em 0.8em;
+      padding: 0.4em 0.6em;
+      transition: color 0.3s ease;
+      white-space: nowrap;
     }
 
     nav a:hover {
       color: #00ff9f;
     }
 
-    .btn {
-      padding: 0.7em 1.5em;
-      margin-top: 2em;
-      margin-right: 1em;
+    nav .btn {
+      padding: 0.4em 0.8em;
+      margin: 0;
       background: #00ff9f;
       border: none;
-      border-radius: 30px;
+      border-radius: 20px;
       color: #000;
       font-weight: bold;
       cursor: pointer;
       transition: all 0.3s ease;
-      animation: pulse 2s infinite;
+      white-space: nowrap;
     }
 
-    .btn:hover {
+    nav .btn:hover {
       background: #00cc88;
       transform: scale(1.05);
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(0, 255, 159, 0.6); }
-      70% { box-shadow: 0 0 0 10px rgba(0, 255, 159, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(0, 255, 159, 0); }
     }
 
     .hamburger {
       display: none;
       flex-direction: column;
       cursor: pointer;
+      z-index: 200;
     }
 
     .hamburger div {
       width: 25px;
       height: 3px;
       background-color: #fff;
-      margin: 2px 0;
+      margin: 3px 0;
     }
 
     .content {
@@ -167,19 +167,42 @@
       line-height: 1.6;
     }
 
+    .btn {
+      padding: 0.7em 1.5em;
+      margin-top: 2em;
+      background: #00ff9f;
+      border: none;
+      border-radius: 30px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+
+    .btn:hover {
+      background: #00cc88;
+      transform: scale(1.05);
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0, 255, 159, 0.6); }
+      70% { box-shadow: 0 0 0 10px rgba(0, 255, 159, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 255, 159, 0); }
+    }
+
     @media (max-width: 768px) {
       nav {
         position: absolute;
         top: 70px;
         left: 0;
-        background: rgba(0, 0, 0, 0.9);
+        background: rgba(0, 0, 0, 0.95);
         width: 100%;
         flex-direction: column;
         align-items: center;
         gap: 1em;
-        padding: 0.5em 0;
+        padding: 1em 0;
         display: none;
-        z-index: 10;
       }
 
       nav.active {
@@ -197,6 +220,15 @@
 
       .content h1 {
         font-size: 2em;
+      }
+
+      nav a {
+        padding: 0.5em 1em;
+        font-size: 1.1em;
+      }
+
+      nav .btn {
+        margin-top: 0.5em;
       }
 
       .btn {
